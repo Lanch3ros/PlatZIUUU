@@ -19,7 +19,7 @@ public class Main {
         Plataforma plataforma = new Plataforma(NOMBRE_PLATAFORMA);
         System.out.println(NOMBRE_PLATAFORMA + "v" + VERSION);
 
-        while(true){
+        while(true) {
             int opcionElegida = ScannerUtils.capturarEntero("""
                     Ingrese una de las siguientes opciones:
                     1. Agregar contenido
@@ -29,7 +29,7 @@ public class Main {
                     5. Salir
                     """);
 
-            System.out.println("Opcion elegida: "  + opcionElegida);
+            System.out.println("Opcion elegida: " + opcionElegida);
 
             switch (opcionElegida) {
                 case AGREGAR -> {
@@ -54,18 +54,5 @@ public class Main {
                 }
             }
         }
-
-
-//        Pelicula pelicula2 = new Pelicula("F1 rapidos papi", 200,  "Locura", 4.1);
-//
-//        plataforma.agregar(pelicula);
-//        plataforma.agregar(pelicula2);
-//        System.out.println("La numero de peliculas que hay en plataforma es: " + plataforma.getPeliculas().size());
-//        plataforma.eliminar(pelicula2);
-//
-//        plataforma.mostrarPeliculas();
-//
-//        Usuario usuario = new Usuario("Jose", "Ayora913@gmail.com");
-//        usuario.ver(pelicula);
     }
 }
