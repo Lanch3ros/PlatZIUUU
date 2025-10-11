@@ -25,13 +25,23 @@ public class Plataforma {
     }
 
     public void mostrarPeliculas() {
-        for (Pelicula pelicula : peliculas) {
-            System.out.println(pelicula.getTitulo());
-        }
+        peliculas.forEach( pelicula -> System.out.println(pelicula.getTitulo()));
     }
 
     public void eliminar(Pelicula pelicula) {
         this.peliculas.remove(pelicula);
     }
 
+    public Pelicula buscarPelicula(String titulo) {
+        return peliculas.stream()
+                .filter(pelicula -> pelicula.getTitulo().equalsIgnoreCase(titulo))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public List<Pelicula> buscarPorGenero(String genero) {
+        return peliculas.stream()
+                .filter(pelicula -> pelicula.getGenero().equalsIgnoreCase(genero))
+                .toList();
+    }
 }
